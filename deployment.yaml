@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: movie-rating-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: movie-rating-app
+  template:
+    metadata:
+      labels:
+        app: movie-rating-app
+    spec:
+      containers:
+        - name: movie-rating-app
+          image: docker.io/DOCKERHUB_USERNAME/movie-rating-app:latest
+          ports:
+            - containerPort: 80
