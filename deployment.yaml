@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: movie-rating-app
-          image: docker.io/DOCKERHUB_USERNAME/movie-rating-app:latest
+          image: docker.io/sangeetha1210/movie-rating-app:latest
           ports:
             - containerPort: 80
